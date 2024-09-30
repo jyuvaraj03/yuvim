@@ -14,6 +14,7 @@ return {
     event = 'VeryLazy',
     dependencies = {
       'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope-frecency.nvim',
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
     config = function()
@@ -29,6 +30,7 @@ return {
         }
       })
       require('telescope').load_extension('fzf')
+      require("telescope").load_extension "frecency"
     end
   },
   {
