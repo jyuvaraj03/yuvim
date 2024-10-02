@@ -26,6 +26,9 @@ return {
             override_file_sorter = true,     -- override the file sorter
             case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                             -- the default case_mode is "smart_case"
+          },
+          frecency = {
+            matcher = "fuzzy"
           }
         }
       })
@@ -107,7 +110,7 @@ return {
       })
     end
   },
-  -- {'Exafunction/codeium.vim', event = 'BufEnter'},
+  {'Exafunction/codeium.vim', event = 'BufEnter', enabled = true},
   { 'pocco81/auto-save.nvim', event = 'BufEnter' },
   {
     'goolord/alpha-nvim',

@@ -64,3 +64,7 @@ keymap("n", "qc", ":cclose<CR>", opts)
 -- File path copy
 keymap("n", "fy", ":call CopyRelativePath()<CR>", opts)
 keymap("n", "fl", ":call CopyRelativePathWithLine()<CR>", opts)
+
+-- emmet wrap
+keymap("n", "<leader>xe", ":lua require('nvim-emmet').wrap_with_abbreviation()<CR>", opts)
+keymap("v", "<leader>xe", ":lua require('nvim-emmet').wrap_with_abbreviation()<CR>", opts)

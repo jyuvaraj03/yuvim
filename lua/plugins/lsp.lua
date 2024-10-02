@@ -15,6 +15,18 @@ return {
     -- Snippets
     { "L3MON4D3/LuaSnip",                  build = "make install_jsregexp" }, -- Required
     { "rafamadriz/friendly-snippets" },                   -- Optional
+    { "olrtg/nvim-emmet" },
+    {
+      'nvimtools/none-ls.nvim',
+      config = function()
+        require('null-ls').setup({
+          sources = {
+            require('null-ls').builtins.formatting.erb_format,
+            require('null-ls').builtins.formatting.htmlbeautifier,
+          }
+        })
+      end
+    }
     -- treesitter
   }
 }

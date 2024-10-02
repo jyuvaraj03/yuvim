@@ -45,9 +45,9 @@ require("mason-lspconfig").setup_handlers({
   end,
 })
 
---lspconfig.rubocop.setup({
-  -- cmd = { "bundle", "exec", "rubocop", "--lsp" },
---})
+lspconfig.rubocop.setup({
+  cmd = { "bundle", "exec", "rubocop", "--lsp" },
+})
 
 lspconfig["solargraph"].setup( -- setup solargraph (Don't install it with mason, it sucks)
   {
