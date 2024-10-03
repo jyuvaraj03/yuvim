@@ -40,6 +40,9 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     event = 'VeryLazy',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter-context'
+    },
     config = function()
       require('nvim-treesitter.configs').setup({
         auto_install = true,
@@ -49,6 +52,7 @@ return {
         },
         indent = { enable = true }
       })
+      require('treesitter-context').setup()
     end
   },
   {
