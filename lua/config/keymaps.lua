@@ -36,9 +36,11 @@ keymap("n", "<leader>e", ":Neotree toggle<CR>", opts)
 keymap("n", "<leader>E", ":Neotree toggle reveal<CR>", opts)
 
 -- telescope
-keymap("n", "<leader><leader>", ":Telescope frecency workspace=CWD<CR>", opts)
-keymap("n", "<leader>,", ":Telescope buffers<CR>", opts)
+-- keymap("n", "<leader><leader>", ":Telescope frecency workspace=CWD<CR>", opts)
+keymap("n", "<leader><leader>", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>,", ":Telescope buffers sort_mru=true<CR>", opts)
 keymap("n", "<leader>sp", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>sd", ":Telescope live_grep search_dirs=", opts)
 keymap("n", "<leader>so", ":Telescope live_grep grep_open_files=true<CR>", opts)
 keymap("n", "<leader>sh", ":Telescope help_tags<CR>", opts)
 keymap("n", "<leader>sc", ":Telescope colorscheme enable_preview=true<CR>", opts)

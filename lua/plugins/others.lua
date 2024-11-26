@@ -41,7 +41,8 @@ return {
     build = ':TSUpdate',
     event = 'VeryLazy',
     dependencies = {
-      'nvim-treesitter/nvim-treesitter-context'
+      'nvim-treesitter/nvim-treesitter-context',
+      'nvim-treesitter/nvim-treesitter-textobjects'
     },
     config = function()
       require('nvim-treesitter.configs').setup({
@@ -50,7 +51,18 @@ return {
           enable = true,
           additional_vim_regex_highlighting = false,
         },
-        indent = { enable = true }
+        indent = { enable = true },
+        textobjects = {
+          swap = {
+            enable = true,
+            swap_next = {
+              ["gl"] = "@parameter.inner",
+            },
+            swap_previous = {
+              ["gH"] = "@parameter.inner",
+            },
+          },
+        },
       })
       require('treesitter-context').setup()
     end
@@ -114,7 +126,7 @@ return {
       })
     end
   },
-  {'Exafunction/codeium.vim', event = 'BufEnter', enabled = true},
+  {'Exafunction/codeium.vim', event = 'BufEnter', enabled = false},
   { 'pocco81/auto-save.nvim', event = 'BufEnter' },
   {
     'goolord/alpha-nvim',
