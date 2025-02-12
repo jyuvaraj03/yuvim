@@ -16,6 +16,7 @@ return {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope-frecency.nvim',
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+      "princejoogie/dir-telescope.nvim",
     },
     config = function()
       require('telescope').setup({
@@ -29,9 +30,10 @@ return {
           },
           frecency = {
             matcher = "fuzzy"
-          }
+          },
         }
       })
+      require("telescope").load_extension("dir")
       require('telescope').load_extension('fzf')
       require("telescope").load_extension "frecency"
     end

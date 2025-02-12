@@ -40,12 +40,13 @@ keymap("n", "<leader>E", ":Neotree toggle reveal<CR>", opts)
 keymap("n", "<leader><leader>", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>,", ":Telescope buffers sort_mru=true<CR>", opts)
 keymap("n", "<leader>sp", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>sd", ":Telescope live_grep search_dirs=", opts)
+-- keymap("n", "<leader>sd", ":Telescope live_grep search_dirs=", opts)
 keymap("n", "<leader>so", ":Telescope live_grep grep_open_files=true<CR>", opts)
 keymap("n", "<leader>sh", ":Telescope help_tags<CR>", opts)
 keymap("n", "<leader>sc", ":Telescope colorscheme enable_preview=true<CR>", opts)
 keymap("n", "<leader><return>", ":Telescope resume<CR>", opts)
 keymap("n", "<leader>*", ":Telescope grep_string<CR>", opts)
+keymap("n", "<leader>sd", "<cmd>Telescope dir live_grep<CR>", { noremap = true, silent = true })
 
 -- tabs & windows
 -- Tabs
