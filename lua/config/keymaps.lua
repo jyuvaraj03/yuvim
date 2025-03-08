@@ -71,3 +71,6 @@ keymap("n", "fl", ":call CopyRelativePathWithLine()<CR>", opts)
 -- emmet wrap
 keymap("n", "<leader>xe", ":lua require('nvim-emmet').wrap_with_abbreviation()<CR>", opts)
 keymap("v", "<leader>xe", ":lua require('nvim-emmet').wrap_with_abbreviation()<CR>", opts)
+
+-- session restore
+keymap("n", "<leader>rs", ":SessionRestore<CR>", opts)
