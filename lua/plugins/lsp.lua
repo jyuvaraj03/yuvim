@@ -26,7 +26,8 @@ return {
           }
         })
       end
-    }
+    },
+    { "RRethy/nvim-treesitter-endwise" },
     -- treesitter
   }
 }
